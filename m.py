@@ -8,6 +8,10 @@ OMDB_API_KEY = "bc90a9a5"
 def home():
     return "Welcome to the NetBear. Use /search?title=<movie_title> to search for movies."
 
+@app.route('/a1fb486106d9e0ec329f1b1fee7a7e86.txt')
+def serve_txt():
+    return send_file('a1fb486106d9e0ec329f1b1fee7a7e86.txt', mimetype='text/plain')
+
 @app.route('/search')
 def search_movie():
     title = request.args.get('title')
